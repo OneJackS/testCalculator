@@ -7,7 +7,6 @@ public class Converter {
         romanKey.put('I', 1);
         romanKey.put('V', 5);
         romanKey.put('X', 10);
-
         arabicKey.put(100, "C");
         arabicKey.put(90, "XC");
         arabicKey.put(50, "L");
@@ -18,11 +17,9 @@ public class Converter {
         arabicKey.put(4, "IV");
         arabicKey.put(1, "I");
     }
-    //  Определяет римское число или нет
     public boolean isRoman(String number) {
         return romanKey.containsKey(number.charAt(0));
     }
-    // Переделывает Арабские в Римские
     public String arabicToRoman(int number) {
         StringBuilder roman = new StringBuilder();
         int arabicNum;
@@ -33,7 +30,6 @@ public class Converter {
         } while (number !=0);
         return roman.toString();
     }
-    // Преобразует Римские в Арабские
     public int romanToArabic(String s) {
         int end = s.length() -1;
         char[] arr = s.toCharArray();
@@ -48,5 +44,4 @@ public class Converter {
             }
         } return result;
     }
-
 }

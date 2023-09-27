@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Calculator {
+public class Main {
     public static String calc(String input) throws IOException {
         String[] values = input.split(" ");
         if (values.length > 3) {
